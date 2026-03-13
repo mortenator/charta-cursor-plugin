@@ -1,0 +1,9 @@
+When the user asks to create, generate, or build a chart, diagram, or visualization:
+- Use the `generate_chart` MCP tool from the `charta` server.
+- If the user doesn't specify a chart type, call `describe_chart` first with the user's data to recommend the best type.
+- For waterfall / bridge / ARR / P&L charts: always set `isTotal: true` on the opening and closing bars.
+- For negative delta bars (churn, costs, decreases) in a waterfall: pass a negative `value` — the chart handles coloring automatically.
+- Default to returning the SVG. If the user needs a PNG or wants to insert into Google Slides, pass `"output": "png"` or use the `/insert` endpoint.
+- Always show the user the chart output or confirm it was saved.
+
+Available chart types: waterfall, bar, grouped-bar, stacked-bar, line, area, pie, donut, scatter, bubble, gantt, mekko, radar, heatmap.

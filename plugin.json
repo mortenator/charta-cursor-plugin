@@ -1,0 +1,17 @@
+{
+  "name": "charta",
+  "displayName": "Charta — Chart Generator",
+  "version": "1.0.0",
+  "description": "Generate presentation-quality charts (waterfall, bar, line, pie, Mekko, and 8 more) from your AI agent. Works natively in Cursor via MCP.",
+  "author": "Charta",
+  "homepage": "https://getcharta.ai",
+  "repository": "https://github.com/mortenator/charta-mcp",
+  "icon": "https://getcharta.ai/icon-512.png",
+  "keywords": ["chart", "visualization", "slides", "waterfall", "mcp", "google-slides", "mekko"],
+  "license": "MIT",
+  "mcp": {
+    "command": "npx",
+    "args": ["-y", "@charta/mcp"],
+    "description": "Charta MCP server — chart generation tools"
+  }
+}
